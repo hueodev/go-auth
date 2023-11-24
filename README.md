@@ -1,12 +1,10 @@
 ## Go & SQLite
-Go and SQLite cmd based auth system i made when learning Go.
+Go and SQLite CMD Based auth system i made when learning Go.
 
 ![mockup](https://i.imgur.com/yStaFPs.png)
 
 ## Getting started
-cmd based auth system i made when learning go. To start run the following command in the project folder.
-
-To get started, run the following commands:
+To get started, run the following command:
 
 ```bash
 # Start the project
