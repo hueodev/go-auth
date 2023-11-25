@@ -10,7 +10,7 @@ import (
 
 // Creates the DB table
 func Database() {
-	db, err := sql.Open("sqlite3", "./database/test.sqlite")
+	db, err := sql.Open("sqlite3", "./database/db.sqlite")
 	if err != nil {
 		fmt.Println("Failed to connect to MySql Database")
 		panic(err.Error())
@@ -26,7 +26,7 @@ func Database() {
 
 // Inserts Username and Password into DB when signingup
 func InsertDB(name string, password string) (string, error) {
-	db, _ := sql.Open("sqlite3", "./database/test.sqlite")
+	db, _ := sql.Open("sqlite3", "./database/db.sqlite")
 
 	name = strings.ToLower(name)
 
@@ -44,7 +44,7 @@ func InsertDB(name string, password string) (string, error) {
 
 // Checks if Username exists
 func CheckUsername(name string) (bool, error) {
-	db, _ := sql.Open("sqlite3", "./database/test.sqlite")
+	db, _ := sql.Open("sqlite3", "./database/db.sqlite")
 	defer db.Close()
 
 	var count int
@@ -62,7 +62,7 @@ func CheckUsername(name string) (bool, error) {
 
 // Checks if Password and Username matches
 func CheckCredentials(username, password string) (bool, error) {
-	db, err := sql.Open("sqlite3", "./database/test.sqlite")
+	db, err := sql.Open("sqlite3", "./database/db.sqlite")
 	if err != nil {
 		return false, err
 	}
